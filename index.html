@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+ <head></head>
+ <body>
+ <script>
+ function findNumber(n){
+ return new Promise(function(resolve, reject){
+ if(!isNaN(n)){
+ resolve("number");
+ }else{
+ reject("not a number");
+ }
+ });
+ }
+ async function findResult(n){
+ try{
+ var result = await findNumber(n);
+ console.log(result);
+ }catch(error){
+ console.log(error);
+ }
+ }
+ findResult("uppe");
+ 
+ </script>
+ </body>
+</html>
